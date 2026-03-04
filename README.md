@@ -91,3 +91,13 @@ Scenario: Two users attempt to pay the same invoice simultaneously.
 
 ### 6. Traceability & Audit Trail
 The Payment Batch Item child table serves as a historical snapshot. We save the priority score to the database at the moment of creation. If a manager audits a submitted batch, they will see the specific score for every invoice as it was at that exact moment, mathematically justifying the payment decision.
+
+
+---
+
+## 7. What I Would Do Differently (With More Time)
+
+[cite_start]As requested, here is a brief note on how I would improve this solution with more time. To elevate this integration into a fully production-ready system, I would implement the following enhancements:
+
+* [cite_start]**Webhook Listener:** Instead of relying on manual polling to fetch new transactions, I would set up a webhook listener to receive real-time transaction updates directly from Ponto.
+* [cite_start]**Payment Initiation API:** I would extend the integration to trigger outbound payments directly from ERPNext using Ponto's Payment Initiation API, automating the full payment lifecycle rather than just generating entries.
